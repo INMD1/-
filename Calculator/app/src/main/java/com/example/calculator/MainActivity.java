@@ -25,9 +25,10 @@ public class MainActivity extends AppCompatActivity {
         subtract = (Button) findViewById(R.id.subtract);
         divide = (Button) findViewById(R.id.divide);
 
-
+        // 아읏풋
         TextView output = (TextView)findViewById(R.id.output);
 
+        //인풋
         EditText  input = (EditText)findViewById(R.id.input1);
         EditText  input2 = (EditText)findViewById(R.id.input2);
 
