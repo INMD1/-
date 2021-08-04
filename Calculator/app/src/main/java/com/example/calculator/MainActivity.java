@@ -10,25 +10,26 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button clean, plus, subtract, divide;
+    private Button clean, plus, subtract, divide, multiply;
     private View.OnClickListener plusc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //초기화
+        //초기화 버튼
         clean = (Button) findViewById(R.id.clean);
 
-        //수식
+        //수식 버튼
         plus = (Button) findViewById(R.id.plus);
         subtract = (Button) findViewById(R.id.subtract);
         divide = (Button) findViewById(R.id.divide);
+        multiply = (Button) findViewById(R.id.multiply);
 
         // 아읏풋
         TextView output = (TextView)findViewById(R.id.output);
 
-        //인풋
+        //인풋풋
         EditText  input = (EditText)findViewById(R.id.input1);
         EditText  input2 = (EditText)findViewById(R.id.input2);
 
@@ -63,6 +64,17 @@ public class MainActivity extends AppCompatActivity {
                 int num2 = Integer.parseInt(input2.getText().toString());
                 //결과값 출력
                 output.setText(Integer.toString(num1 / num2));
+            }
+        });
+
+        multiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 정수형으로 가져오기
+                int num1 = Integer.parseInt(input.getText().toString());
+                int num2 = Integer.parseInt(input2.getText().toString());
+                //결과값 출력
+                output.setText(Integer.toString(num1 * num2));
             }
         });
 
